@@ -7,6 +7,8 @@ import Hotels from "./components/Hotels";
 import Notifications from "./components/Notification";
 import Payments from "./components/Payments";
 import HotelSearch from "./components/HotelSearch";
+import Configuration from "./components/Configuration";
+import NotificationDetails from "./components/NotificationDetails";
 const App = () => {
   return (
     <>
@@ -30,6 +32,12 @@ const App = () => {
               </Route>
               <Route exact path="/search">
                 <HotelSearch />
+              </Route>
+              <Route exact path="/configuration">
+                <Configuration />
+              </Route>
+              <Route exact path="/notification-details">
+                <NotificationDetails />
               </Route>
             </Switch>
           </section>
