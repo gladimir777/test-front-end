@@ -1,28 +1,40 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./components/Nav";
 import DashboardNav from "./components/DashboardNav";
-import WelcomeCard from "./components/WelcomeCard";
-import HomeNav from "./components/HomeNav";
+import HomeContainer from "./components/HomeContainer";
 import Hotels from "./components/Hotels";
-import Notification from "./components/Notification";
-
+import Notifications from "./components/Notification";
+import Payments from "./components/Payments";
+import HotelSearch from "./components/HotelSearch";
 const App = () => {
   return (
     <>
-      <div className="container">
-        <Nav />
-        <section className="wMax1000 panel flex-one pl12em pr12em">
-          <DashboardNav />
-          <div className="containerCenter">
-            <div className="row flex-dir-c">
-              <WelcomeCard />
-              <HomeNav />
-              <Hotels />
-            </div>
-            <Notification />
-          </div>
-        </section>
-      </div>
+      <Router>
+        <div className="container">
+          <Nav />
+          <section className="wMax1000 panel flex-one pl12em pr12em">
+            <DashboardNav />
+            <Route exact path="/">
+              <HomeContainer />
+            </Route>
+            <Switch>
+              <Route exact path="/hotels">
+                <Hotels />
+              </Route>
+              <Route exact path="/notifications">
+                <Notifications />
+              </Route>
+              <Route exact path="/payments">
+                <Payments />
+              </Route>
+              <Route exact path="/search">
+                <HotelSearch />
+              </Route>
+            </Switch>
+          </section>
+        </div>
+      </Router>
     </>
   );
 };
