@@ -9,6 +9,7 @@ import Payments from "./components/Payments";
 import HotelSearch from "./components/HotelSearch";
 import Configuration from "./components/Configuration";
 import NotificationDetails from "./components/NotificationDetails";
+
 const App = () => {
   return (
     <>
