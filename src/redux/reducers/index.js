@@ -1,8 +1,4 @@
 import { combineReducers } from "redux";
-
-//import alert from "./alert";
-//import auth from "./auth";
-//import profile from "./profile";
-import hotels from "./post";
-
-export default combineReducers({ hotels });
+import hotels from "./hotels";
+import notifications from "./notifications";
+export default combineReducers({ hotels, notifications });

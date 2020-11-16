@@ -2,7 +2,7 @@ import React from "react";
 import WelcomeCard from "./WelcomeCard";
 import HomeNav from "./HomeNav";
 import Hotels from "./Hotels";
-import Notification from "./Notification";
+import Notification from "./Notifications";
 
 const HomeContainer = () => {
   return (

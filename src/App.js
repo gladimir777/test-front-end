@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import DashboardNav from "./components/DashboardNav";
 import HomeContainer from "./components/HomeContainer";
 import Hotels from "./components/Hotels";
-import Notifications from "./components/Notification";
+import Notifications from "./components/Notifications";
 import Payments from "./components/Payments";
 import HotelSearch from "./components/HotelSearch";
 import Configuration from "./components/Configuration";
