@@ -1,4 +1,4 @@
-import axios from "axios";
+/*import axios from "axios";
 import { setAlert } from "./alert";
 
 import {
@@ -173,3 +173,4 @@ export const deleteComent = (postId, comentId) => async (dispatch) => {
     });
   }
 };
+*/
