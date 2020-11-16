@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import Hotel from "./Hotel";
 import { getHotels } from "../redux/action/hotels";
 
 const Hotels = ({ getHotels, hotels }) => {
@@ -7,7 +8,8 @@ const Hotels = ({ getHotels, hotels }) => {
     getHotels();
   }, []);
 
-  console.log("HHHHHHHH", hotels);
+  console.log("HHHHHHHH", hotels.hotels);
+  const hotel = hotels.hotels.map((h) => <Hotel hotel={h} key={h.id} />);
   return (
     <>
       <h2 className="ml10px mt10 textsize-1 fs-sbold cBlack">
@@ -15,9 +17,10 @@ const Hotels = ({ getHotels, hotels }) => {
       </h2>
 
       <div className="row flex-dir-r w96Porc flex-wrap ">
-        <div>
+        {hotel}
+        {/*<div>
           <img
-            src={hotels.hotels[0].imgUrl}
+            // src={hotels.hotels[0].imgUrl}
             alt=""
             srcset=""
             className="card row flex-dir-c flexa-jcsb flexa-ai p10 img imghotel-1 wMin150 hMin150 m2px mt10 bcWhite"
@@ -52,7 +55,7 @@ const Hotels = ({ getHotels, hotels }) => {
           <a href="#" className="btn bcPurple">
             Reservar
           </a>
-        </div>
+        </div>*/}
       </div>
     </>
   );
