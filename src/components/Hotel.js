@@ -1,7 +1,6 @@
 import React from "react";
 
 const Hotel = ({ hotel: { imgUrl, name } }) => {
-  console.log("name", name);
   return (
     <>
       <div

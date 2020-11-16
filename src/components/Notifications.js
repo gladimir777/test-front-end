@@ -8,7 +8,6 @@ const Notifications = ({ getNotifications, notifications }) => {
     getNotifications();
   }, []);
 
-  console.log("Notifications", notifications.notifications);
   const notification = notifications.notifications.map((n) => (
     <Notification key={n.id} notification={n} />
   ));

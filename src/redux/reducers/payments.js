@@ -13,7 +13,7 @@ export default function (state = initialState, action) {
     case GET_PAYMENTS:
       return {
         ...state,
-        notifications: payload,
+        payments: payload,
         loading: false,
       };
 

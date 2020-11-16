@@ -1,15 +1,22 @@
 import React, { useEffect } from "react";
+import { connect } from "react-redux";
 import { getPayments } from "../redux/action/payments";
+import Payment from "./Payment";
 
 const Payments = ({ getPayments, payments }) => {
   useEffect(() => {
     getPayments();
   }, []);
 
-  console.log("Payments", payments);
+  const payment = payments.payments.map((p, i) => (
+    <Payment key={i} payment={p} />
+  ));
   return (
     <div>
-      <h1>Payments</h1>
+      <h1 style={{ marginTop: 10, marginLeft: 15, fontSize: "1.5rem" }}>
+        Pagos
+      </h1>
+      {payment}
     </div>
   );
 };

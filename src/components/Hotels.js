@@ -8,7 +8,6 @@ const Hotels = ({ getHotels, hotels }) => {
     getHotels();
   }, []);
 
-  console.log("HHHHHHHH", hotels.hotels);
   const hotel = hotels.hotels.map((h) => <Hotel hotel={h} key={h.id} />);
   return (
     <>
