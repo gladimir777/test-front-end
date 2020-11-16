@@ -21,7 +21,7 @@ const Notification = ({
           </h4>
         </div>
         <div className="notif-right">
-          <h4 className="mt4 textsize-2 fs-regular cBlue">Miguel Ruiz</h4>
+          <h4 className="mt4 textsize-2 fs-regular cBlue">{name}</h4>
           <p className="mt4 textsize-3 cGray">{content}</p>
         </div>
       </div>
